@@ -1,0 +1,26 @@
+{
+  "invoiceBusiness": {
+    "url": "https://dppt.guangdong.chinatax.gov.cn:8443/invoice-business",
+    "method": "GET",
+    "params": {
+      "required": [
+        "ruuid"
+      ],
+      "optional": []
+    },
+    "response": "visible UI section .section-wrap containing 开票情况概览; quota values are in .g-data-display-panel",
+    "verified_at": "2026-08-20",
+    "notes": "Use UI_SELECTOR with the persistent browser profile. Internal quota APIs carry dynamic signed query parameters and are intentionally not replayed."
+  },
+  "taxPortal": {
+    "url": "https://etax.guangdong.chinatax.gov.cn:8443/loginb/",
+    "method": "GET",
+    "params": {
+      "required": [],
+      "optional": []
+    },
+    "response": "authenticated portal DOM with subject div[title] directly above the taxpayer identification number",
+    "verified_at": "2026-08-20",
+    "notes": "Use the same persistent OpenCLI profile as chinatax-login."
+  }
+}

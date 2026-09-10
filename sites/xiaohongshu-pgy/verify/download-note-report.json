@@ -1,0 +1,45 @@
+{
+  "args": {
+    "output": "C:\\tmp\\pgy-adapter-verify",
+    "copy-share": false,
+    "logout": true,
+    "timeout": 180
+  },
+  "expect": {
+    "rowCount": {
+      "min": 1,
+      "max": 1
+    },
+    "columns": [
+      "status",
+      "date",
+      "file",
+      "sharedFile",
+      "size",
+      "url"
+    ],
+    "types": {
+      "status": "string",
+      "date": "string",
+      "file": "string",
+      "sharedFile": "string|null",
+      "size": "number",
+      "url": "string"
+    },
+    "patterns": {
+      "status": "^ok$",
+      "date": "^\\d{4}-\\d{2}-\\d{2}$",
+      "file": "新媒体蒲公英\\.(csv|xlsx)$",
+      "url": "^https://pgy\\.xiaohongshu\\.com/"
+    },
+    "notEmpty": [
+      "status",
+      "date",
+      "file",
+      "url"
+    ],
+    "mustBeTruthy": [
+      "size"
+    ]
+  }
+}

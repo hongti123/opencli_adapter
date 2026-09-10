@@ -1,0 +1,36 @@
+{
+  "appealList": {
+    "url": "https://mms.pinduoduo.com/api/colombo/tuju/appealList",
+    "method": "POST",
+    "params": {
+      "required": [
+        "pageNo",
+        "pageSize",
+        "start",
+        "end",
+        "appealStatusIn",
+        "statusIn"
+      ],
+      "optional": [
+        "orderSn",
+        "exemptionType"
+      ]
+    },
+    "response": "result.merchantPenaltyTickets[] 列表；result.total 为总数；result.appealListTabs 提供问题类型映射",
+    "verified_at": "2026-08-27",
+    "notes": "页面默认 pageSize=20、最近7个自然日、全部 appealStatus 0..8、全部 penalty status 0..7/10"
+  },
+  "detail": {
+    "url": "https://mms.pinduoduo.com/api/colombo/tuju/detail",
+    "method": "POST",
+    "params": {
+      "required": [
+        "ticketSn"
+      ],
+      "optional": []
+    },
+    "response": "result 为单条完整消费者负向体验补偿详情，字段会按订单变化",
+    "verified_at": "2026-08-27",
+    "notes": "使用 list.ticketSn 查询；detail.orderSn 与列表订单号核对"
+  }
+}

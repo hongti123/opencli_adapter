@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-08-20T09:10:00+08:00",
+  "source": "visible-ui",
+  "page_url": "https://dppt.guangdong.chinatax.gov.cn:8443/invoice-business?ruuid=<redacted>",
+  "selector_shape": {
+    "section": ".section-wrap containing 开票情况概览",
+    "panel": ".g-data-display-panel with exact header 可用发票额度（元）",
+    "available": ".g-data-display-content",
+    "total": ".g-data-display-panel-footer .g-tooltip-label-label beginning 发票总额度："
+  },
+  "sample": {
+    "availableInvoiceQuota": "<redacted-number>",
+    "totalInvoiceQuota": "<redacted-number>"
+  }
+}

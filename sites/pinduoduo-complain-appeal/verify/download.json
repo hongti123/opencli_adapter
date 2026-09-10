@@ -1,0 +1,63 @@
+{
+  "args": {
+    "output-dir": "D:\\chatgpt工作空间\\13拼多多申诉单",
+    "store-short-name": "箭牌旗舰店",
+    "overwrite": true,
+    "detail-concurrency": 3
+  },
+  "expect": {
+    "rowCount": {
+      "min": 1,
+      "max": 1
+    },
+    "columns": [
+      "status",
+      "storeName",
+      "storeShortName",
+      "startDate",
+      "endDate",
+      "filter",
+      "rowCount",
+      "detailCount",
+      "filename",
+      "filePath",
+      "url"
+    ],
+    "types": {
+      "status": "string",
+      "storeName": "string",
+      "storeShortName": "string",
+      "startDate": "string",
+      "endDate": "string",
+      "filter": "string",
+      "rowCount": "number",
+      "detailCount": "number",
+      "filename": "string",
+      "filePath": "string",
+      "url": "string"
+    },
+    "patterns": {
+      "status": "^downloaded$",
+      "startDate": "^\\d{4}-\\d{2}-\\d{2}$",
+      "endDate": "^\\d{4}-\\d{2}-\\d{2}$",
+      "filename": "^订单申诉明细-.+-\\d{4}-\\d{2}-\\d{2}_\\d{4}-\\d{2}-\\d{2}\\.xlsx$",
+      "filePath": "\\.xlsx$",
+      "url": "^https://mms\\.pinduoduo\\.com/aftersales/customer_complain_appeal$"
+    },
+    "notEmpty": [
+      "status",
+      "storeName",
+      "storeShortName",
+      "startDate",
+      "endDate",
+      "filter",
+      "filename",
+      "filePath",
+      "url"
+    ],
+    "mustBeTruthy": [
+      "rowCount",
+      "detailCount"
+    ]
+  }
+}

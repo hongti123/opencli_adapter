@@ -1,0 +1,45 @@
+{
+  "args": {
+    "portal-url": "https://etax.guangdong.chinatax.gov.cn:8443/loginb/"
+  },
+  "expect": {
+    "rowCount": {
+      "min": 1,
+      "max": 1
+    },
+    "columns": [
+      "status",
+      "alreadyLoggedOut",
+      "loginSurface",
+      "loginVisible",
+      "loginFormVisible",
+      "subjectInfo",
+      "url"
+    ],
+    "types": {
+      "status": "string",
+      "alreadyLoggedOut": "boolean",
+      "loginSurface": "string",
+      "loginVisible": "boolean",
+      "loginFormVisible": "boolean",
+      "subjectInfo": "boolean",
+      "url": "string"
+    },
+    "patterns": {
+      "status": "^ok$",
+      "loginSurface": "^(portal-login-entry|identity-login-form)$",
+      "url": "^https://(?:etax|tpass)\\.guangdong\\.chinatax\\.gov\\.cn:8443/"
+    },
+    "notEmpty": [
+      "status",
+      "loginSurface",
+      "url"
+    ],
+    "mustNotContain": {
+      "status": [
+        "error",
+        "failed"
+      ]
+    }
+  }
+}

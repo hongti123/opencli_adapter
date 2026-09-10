@@ -1,0 +1,59 @@
+{
+  "args": {
+    "portal-url": "https://etax.guangdong.chinatax.gov.cn:8443/loginb/",
+    "quota-url": "https://dppt.guangdong.chinatax.gov.cn:8443/invoice-business?ruuid=1786615619552",
+    "file-date": "2026-08-20",
+    "output-dir": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\chinatax-invoice-quo-verify",
+    "overwrite": true,
+    "subject-timeout": 30,
+    "quota-timeout": 60
+  },
+  "expect": {
+    "rowCount": {
+      "min": 1,
+      "max": 1
+    },
+    "columns": [
+      "status",
+      "subjectName",
+      "taxpayerId",
+      "availableInvoiceQuota",
+      "totalInvoiceQuota",
+      "filename",
+      "filePath",
+      "sheetName",
+      "url"
+    ],
+    "types": {
+      "status": "string",
+      "subjectName": "string",
+      "taxpayerId": "string",
+      "availableInvoiceQuota": "number",
+      "totalInvoiceQuota": "number",
+      "filename": "string",
+      "filePath": "string",
+      "sheetName": "string",
+      "url": "string"
+    },
+    "patterns": {
+      "status": "^created$",
+      "taxpayerId": "^[0-9A-Z]{15,20}$",
+      "filename": "^.+-发票额度-\\d{4}-\\d{2}-\\d{2}\\.xlsx$",
+      "sheetName": "^额度$",
+      "url": "^https://dppt\\.guangdong\\.chinatax\\.gov\\.cn:8443/invoice-business\\?ruuid=\\d+$"
+    },
+    "notEmpty": [
+      "status",
+      "subjectName",
+      "taxpayerId",
+      "filename",
+      "filePath",
+      "sheetName",
+      "url"
+    ],
+    "mustBeTruthy": [
+      "availableInvoiceQuota",
+      "totalInvoiceQuota"
+    ]
+  }
+}

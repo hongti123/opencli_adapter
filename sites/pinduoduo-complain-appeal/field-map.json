@@ -1,0 +1,37 @@
+{
+  "mmsGoodsInfoVO.goodsName": {
+    "meaning": "订单申诉清单的商品标题",
+    "verified_at": "2026-08-27",
+    "source": "appealList response compared with the visible 商品信息 column"
+  },
+  "mmsGoodsInfoVO.goodsId": {
+    "meaning": "订单申诉清单的商品ID",
+    "verified_at": "2026-08-27",
+    "source": "appealList response compared with the visible 商品信息 column"
+  },
+  "playMoneyAmount": {
+    "meaning": "补偿金额，接口单位为分，Excel 输出换算为元",
+    "verified_at": "2026-08-27",
+    "source": "appealList and detail responses"
+  },
+  "status": {
+    "meaning": "扣款进度枚举",
+    "verified_at": "2026-08-27",
+    "source": "appealList response and page status labels"
+  },
+  "appealStatus": {
+    "meaning": "处理状态枚举",
+    "verified_at": "2026-08-27",
+    "source": "appealList response and page status labels"
+  },
+  "compensationReason": {
+    "meaning": "消费者补偿说明中的补偿原因",
+    "verified_at": "2026-08-27",
+    "source": "detail response compared with the detail page"
+  },
+  "compensationAccordance": {
+    "meaning": "消费者补偿说明中的补偿依据",
+    "verified_at": "2026-08-27",
+    "source": "detail response compared with the detail page"
+  }
+}

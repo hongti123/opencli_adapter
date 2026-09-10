@@ -1,0 +1,60 @@
+{
+  "args": {
+    "portal-url": "https://etax.guangdong.chinatax.gov.cn:8443/loginb/",
+    "query-url": "https://dppt.guangdong.chinatax.gov.cn:8443/dedeuction-type-checked-business"
+  },
+  "expect": {
+    "rowCount": {
+      "min": 1,
+      "max": 1
+    },
+    "columns": [
+      "status",
+      "subjectName",
+      "startDate",
+      "endDate",
+      "rowCount",
+      "downloaded",
+      "filename",
+      "filePath",
+      "url"
+    ],
+    "types": {
+      "status": "string",
+      "subjectName": "string",
+      "startDate": "string",
+      "endDate": "string",
+      "rowCount": "number",
+      "downloaded": "boolean",
+      "filename": "string",
+      "filePath": "string",
+      "url": "string"
+    },
+    "patterns": {
+      "status": "^(no_data|downloaded)$",
+      "startDate": "^\\d{4}-\\d{2}-\\d{2}$",
+      "endDate": "^\\d{4}-\\d{2}-\\d{2}$",
+      "url": "^https://dppt\\.guangdong\\.chinatax\\.gov\\.cn:8443/dedeuction-type-checked-business(?:[/?#].*)?$"
+    },
+    "notEmpty": [
+      "status",
+      "subjectName",
+      "startDate",
+      "endDate",
+      "url"
+    ],
+    "mustNotContain": {
+      "subjectName": [
+        "国家税务总局",
+        "纳税人识别号"
+      ]
+    },
+    "mustBeTruthy": [
+      "status",
+      "subjectName",
+      "startDate",
+      "endDate",
+      "url"
+    ]
+  }
+}

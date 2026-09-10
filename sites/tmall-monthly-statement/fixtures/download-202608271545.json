@@ -1,0 +1,14 @@
+[
+  {
+    "status": "downloaded",
+    "storeName": "[redacted-store]",
+    "storeShortName": "opencli-verify",
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "detailCount": 353,
+    "downloaded": true,
+    "filename": "月结账单-opencli-verify-2026-07-01_2026-07-31.xlsx",
+    "filePath": "[redacted-local-path]",
+    "url": "https://myseller.taobao.com/home.htm/whale-accountant/pay/capital/home?active=fund_month"
+  }
+]

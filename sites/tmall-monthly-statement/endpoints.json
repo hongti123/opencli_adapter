@@ -1,0 +1,15 @@
+{
+  "monthly-summary-ui": {
+    "url": "https://myseller.taobao.com/home.htm/whale-accountant/pay/capital/home",
+    "method": "GET",
+    "params": {
+      "required": [],
+      "optional": [
+        "active"
+      ]
+    },
+    "response": "authenticated rendered 月汇总 DOM with #billCycle and a YYYYMM table row containing 下载明细",
+    "verified_at": "2026-08-27",
+    "notes": "Use active=fund_month. The visible month picker uses td[title=YYYY-MM]; select the same month twice for a one-month range."
+  }
+}

@@ -1,0 +1,6 @@
+/*
+!/.gitignore
+!/.gitattributes
+!/clis/
+!/sites/
+clis/*/node_modules/

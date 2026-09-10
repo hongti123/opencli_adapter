@@ -1,0 +1,59 @@
+{
+  "args": {
+    "store-short-name": "opencli-verify",
+    "output-dir": "D:\\chatgpt工作空间\\14天猫月结账单下载\\verify-output",
+    "overwrite": true,
+    "site-session": "persistent",
+    "keep-tab": true,
+    "window": "foreground"
+  },
+  "expect": {
+    "rowCount": {
+      "min": 1,
+      "max": 1
+    },
+    "columns": [
+      "status",
+      "storeName",
+      "storeShortName",
+      "startDate",
+      "endDate",
+      "detailCount",
+      "downloaded",
+      "filename",
+      "filePath",
+      "url"
+    ],
+    "types": {
+      "status": "string",
+      "storeName": "string",
+      "storeShortName": "string",
+      "startDate": "string",
+      "endDate": "string",
+      "detailCount": "number",
+      "downloaded": "boolean",
+      "filename": "string",
+      "filePath": "string",
+      "url": "string"
+    },
+    "patterns": {
+      "status": "^downloaded$",
+      "storeName": "^.+$",
+      "storeShortName": "^opencli-verify$",
+      "startDate": "^\\d{4}-\\d{2}-01$",
+      "endDate": "^\\d{4}-\\d{2}-(?:28|29|30|31)$",
+      "filename": "^月结账单-opencli-verify-\\d{4}-\\d{2}-01_\\d{4}-\\d{2}-(?:28|29|30|31)\\.xlsx$",
+      "url": "^https://myseller\\.taobao\\.com/home\\.htm/whale-accountant/pay/capital/home\\?active=fund_month$"
+    },
+    "notEmpty": [
+      "storeName",
+      "filename",
+      "filePath",
+      "url"
+    ],
+    "mustBeTruthy": [
+      "detailCount",
+      "downloaded"
+    ]
+  }
+}

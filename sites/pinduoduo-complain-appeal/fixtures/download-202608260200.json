@@ -1,0 +1,56 @@
+{
+  "redacted": true,
+  "description": "Schema-only sample. Merchant, order, ticket, goods and consumer-specific values were removed.",
+  "list": {
+    "success": true,
+    "errorCode": 0,
+    "errorMsg": null,
+    "result": {
+      "merchantPenaltyTickets": [
+        {
+          "ticketSn": "[redacted-ticket]",
+          "orderSn": "[redacted-order]",
+          "status": 0,
+          "createdAt": 0,
+          "ticketType": 0,
+          "playMoneyAmount": 0,
+          "appealStatus": 0,
+          "mmsGoodsInfoVO": {
+            "orderSn": "[redacted-order]",
+            "goodsId": "[redacted-goods]",
+            "goodsName": "[redacted]",
+            "goodsNumber": 0,
+            "thumbUrl": "[redacted]"
+          }
+        }
+      ],
+      "total": 1,
+      "appealListTabs": [
+        {
+          "tabName": "[redacted-type]",
+          "ticketTypeIn": [
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "detail": {
+    "success": true,
+    "errorCode": 0,
+    "errorMsg": null,
+    "result": {
+      "ticketSn": "[redacted-ticket]",
+      "orderSn": "[redacted-order]",
+      "title": "[redacted]",
+      "subtitle": "[redacted]",
+      "compensationTypeDesc": "[redacted]",
+      "compensationReason": "[redacted]",
+      "compensationAccordance": "[redacted]",
+      "merchantQuestionAnswerVOS": [],
+      "compensationDescriptionVOS": [],
+      "productProblemDesc": null,
+      "productProblemImages": []
+    }
+  }
+}

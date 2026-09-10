@@ -1,0 +1,13 @@
+{
+  "portal": {
+    "url": "https://etax.guangdong.chinatax.gov.cn:8443/loginb/",
+    "method": "GET",
+    "params": {
+      "required": [],
+      "optional": []
+    },
+    "response": "Authenticated portal UI with #NavTopPopup; logout returns the public portal or redirects to the unified identity login form",
+    "verified_at": "2026-08-21",
+    "notes": "UI action: hover #NavTopPopup, then click the visible .grlist containing .t-icon-logout. The adapter URL remains a required CLI argument."
+  }
+}

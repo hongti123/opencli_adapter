@@ -1,0 +1,24 @@
+{
+  "portal": {
+    "url": "https://etax.guangdong.chinatax.gov.cn:8443/loginb/",
+    "method": "GET",
+    "params": {
+      "required": [],
+      "optional": []
+    },
+    "response": "Authenticated portal DOM containing the subject name adjacent to a taxpayer identifier",
+    "verified_at": "2026-08-20",
+    "notes": "UI_SELECTOR; reuse the opc-default browser login state and do not persist identifiers in fixtures"
+  },
+  "purchase-detail": {
+    "url": "https://dppt.guangdong.chinatax.gov.cn:8443/dedeuction-type-checked-business",
+    "method": "GET",
+    "params": {
+      "required": [],
+      "optional": []
+    },
+    "response": "Authenticated purchase-invoice query UI with date filters, result table, pagination total, and export button",
+    "verified_at": "2026-08-20",
+    "notes": "UI_SELECTOR; both date inputs have placeholder=请选择 and must be located by their exact form labels"
+  }
+}
